@@ -1,12 +1,14 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/introcss.css" rel="stylesheet" type="text/css">
+	<link href="../css/introcss.css" rel="stylesheet" type="text/css">
+	<?php 	include("../action/conexionBD.php");
+			
+	?>
 	<title>Listado de Platos de Comida</title>	
 </head>
-<header>
+<header class="head">
 	<nav>
     	<ul>
       		<li class="menu">
@@ -25,8 +27,15 @@
     	</ul>
 	</nav>
 </header>
+<!-- .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. -->
+<?php
+include("../action/carta.php");
+
+echo $row["nombre"];
+?>
+<!-- .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. -->
 <body>
-	<h1>Listado de Platos de Comida</h1>
+<h1>Listado de Platos de Comida</h1>
 	<ul>
 		<li>
 			<img src="https://via.placeholder.com/100" alt="Plato 1">
@@ -34,22 +43,6 @@
 					<h2>Plato 1</h2>
 					<p>Descripción del plato 1.</p>
 					<p class="price">$10.00</p>
-				</div>
-		</li>
-		<li>
-			<img src="https://via.placeholder.com/100" alt="Plato 2">
-				<div>
-					<h2>Plato 2</h2>
-					<p>Descripción del plato 2.</p>
-					<p class="price">$15.00</p>
-				</div>
-		</li>
-		<li>
-			<img src="https://via.placeholder.com/100" alt="Plato 3">
-				<div>
-					<h2>Plato 3</h2>
-					<p>Descripción del plato 3.</p>
-					<p class="price">$12.00</p>
 				</div>
 		</li>
 	</ul>
